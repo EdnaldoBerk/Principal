@@ -1,0 +1,222 @@
+/* Estilos Gerais */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    background-color: #CEDAE3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Cabeçalho */
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: #181947;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+}
+
+.nav__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    background-image: url('imagens/Logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 150px;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    font-size: 1.25rem;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.nav__link {
+    transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn {
+    border: 0;
+    border-radius: 20px;
+    padding: 0.75em 2.25em;
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn--primary {
+    background-color: #4288AA;
+    color: hsla(0, 100%, 100%, 0.8);
+}
+
+.btn--primary:hover {
+    border-radius: 15px;
+    background-color: rgba(66, 136, 170, 0.9);
+}
+.Int {
+    color: #181947;
+    text-align: center;
+}
+/* Carrossel */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1em;
+    padding: 2em 0;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #181947;
+    color: white;
+    transition: transform 0.3s, width 0.3s;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.background {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1em;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+}
+
+.cta-button {
+    padding: 0.5em 1em;
+    background-color: #4288AA;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: none; /* Oculto por padrão */
+}
+
+.cta-button:hover {
+    background-color: rgba(66, 136, 170, 0.9);
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+/* Game of the Year - Tópico 1 */
+.game-of-the-year {
+    padding: 2em;
+    background-color: #202060;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2em auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Game of the Year - Tópico 2 */
+.game-of-the-year h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+/* Game of the Year - Tópico 3 */
+.game-of-the-year p {
+    font-size: 1.25rem;
+    margin-bottom: 2em;
+}
+
+/* Game of the Year - Tópico 4 */
+.game-of-the-year ul {
+    list-style: none;
+    padding: 0;
+}
+
+.game-of-the-year li {
+    margin: 0.5em 0;
+    font-size: 1.1rem;
+}
+
+
+
+/* Classes Adicionais */
+.card.active {
+    transform: scale(1.05);
+    width: 350px;
+}
+
+.card.active .cta-button {
+    display: block; /* Exibe o botão quando ativo */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav__container {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

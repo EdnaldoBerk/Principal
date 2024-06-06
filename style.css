@@ -98,6 +98,7 @@ a {
     overflow-x: auto;
     gap: 1em;
     padding: 2em 0;
+    text-align: center;
 }
 
 .card {
